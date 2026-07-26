@@ -78,31 +78,13 @@ h1{
 /* ---- contents ---- */
 nav.contents{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1.3rem 0;margin:2.8rem 0 0}
 nav.contents ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.35rem 2.5rem}
-nav.contents a{
-  display:grid;grid-template-columns:5.4rem 1fr;gap:.9rem;
-  text-decoration:none;color:var(--ink);padding:.22rem 0;
-}
-nav.contents a:hover .cn{color:var(--spot)}
+nav.contents a{text-decoration:none;color:var(--ink);display:block;padding:.22rem 0}
 nav.contents a:hover .ct{color:var(--spot)}
-nav.contents .cn{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);padding-top:.36em}
 nav.contents .ct{font-family:var(--display);font-weight:600;font-size:.94rem;line-height:1.35}
 
 /* ---- eras ---- */
 .eras{margin-top:clamp(2.2rem,5vw,3.4rem)}
-.era{display:grid;grid-template-columns:7rem 1fr;gap:0 2.6rem}
-.era-years{
-  font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);
-  margin:0;padding-top:.72rem;text-align:right;white-space:nowrap;
-}
-.era-body{
-  border-left:1px solid var(--rule);
-  padding:0 0 clamp(3rem,6vw,4.5rem) 2.6rem;
-  position:relative;min-width:0;
-}
-.era-body::before{
-  content:"";position:absolute;left:0;top:1.05rem;
-  width:1.5rem;height:2px;background:var(--spot);
-}
+.era-body{padding:0 0 clamp(3rem,6vw,4.5rem);min-width:0}
 .era:last-child .era-body{padding-bottom:1rem}
 h2{
   font-family:var(--display);font-weight:900;
@@ -155,13 +137,9 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
   .cue{font-size:.7rem;letter-spacing:.05em;gap:.7rem;margin-bottom:1.2rem}
   .cue::before{width:2rem}
   .span{font-size:.62rem}
-  .era{grid-template-columns:1fr;gap:0}
-  .era-years{text-align:left;padding:0 0 .45rem;order:-1}
-  .era-body{border-left:none;padding-left:0;padding-bottom:2.8rem}
-  .era-body::before{display:none}
-  .era{border-top:1px solid var(--rule);padding-top:1.6rem;margin-bottom:0}
+  .era-body{padding-bottom:2.8rem}
+  .era{border-top:1px solid var(--rule);padding-top:1.6rem}
   .era:first-child{border-top:none;padding-top:0}
-  nav.contents a{grid-template-columns:5rem 1fr;gap:.7rem}
   .track > a{grid-template-columns:1fr;gap:.15rem}
   .year{padding-top:.15rem}
 }
@@ -186,16 +164,16 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
   <nav class="contents" aria-label="Contents">
     <ol>
-      <li><a href="#now"><span class="cn">2013&ndash;25</span><span class="ct">What I am listening to now</span></a></li>
-      <li><a href="#deep"><span class="cn">2008&ndash;</span><span class="ct">The deep end</span></a></li>
-      <li><a href="#prog"><span class="cn">2001&ndash;21</span><span class="ct">Pieces of music, not songs</span></a></li>
-      <li><a href="#altrock"><span class="cn">2003&ndash;09</span><span class="ct">The radio years</span></a></li>
-      <li><a href="#symphonic"><span class="cn">2002&ndash;05</span><span class="ct">Big voices</span></a></li>
-      <li><a href="#numetal"><span class="cn">1997&ndash;04</span><span class="ct">Weirder was better</span></a></li>
-      <li><a href="#industrial"><span class="cn">1996&ndash;04</span><span class="ct">Industrial and shock rock</span></a></li>
-      <li><a href="#grunge"><span class="cn">1994&ndash;97</span><span class="ct">Grunge and alternative</span></a></li>
-      <li><a href="#thrash"><span class="cn">1984&ndash;96</span><span class="ct">Where it starts</span></a></li>
-      <li><a href="#score"><span class="cn">&mdash;</span><span class="ct">Not a band</span></a></li>
+      <li><a href="#now"><span class="ct">What I am listening to now</span></a></li>
+      <li><a href="#deep"><span class="ct">The deep end</span></a></li>
+      <li><a href="#prog"><span class="ct">Pieces of music, not songs</span></a></li>
+      <li><a href="#altrock"><span class="ct">The radio years</span></a></li>
+      <li><a href="#symphonic"><span class="ct">Big voices</span></a></li>
+      <li><a href="#numetal"><span class="ct">Weirder was better</span></a></li>
+      <li><a href="#industrial"><span class="ct">Industrial and shock rock</span></a></li>
+      <li><a href="#grunge"><span class="ct">Grunge and alternative</span></a></li>
+      <li><a href="#thrash"><span class="ct">Where it starts</span></a></li>
+      <li><a href="#score"><span class="ct">Not a band</span></a></li>
     </ol>
   </nav>
 </header>
@@ -203,33 +181,32 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 <main class="eras">
 <!-- 1 -->
 <section class="era" id="now">
-  <p class="era-years">2013&ndash;2025</p>
   <div class="era-body">
     <h2>What I am listening to now</h2>
     <p class="era-note">Where I am now, and at the top of the page on purpose. If any section here is going to work for you, my money is on this one.</p>
     <ol class="tracks">
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=QJJYpsA5tv8"><span class="line"><span class="artist">Bring Me the Horizon</span><span class="title">Can You Feel My Heart</span></span><span class="year">2013</span></a>
-        <p class="note">From Sheffield, in England. They started out unlistenably heavy and have been getting more melodic every single album since, which is the opposite of what bands normally do.</p>
+        <a href="https://www.youtube.com/watch?v=JJpFTUP6fIo"><span class="line"><span class="artist">Sleep Token</span><span class="title">Emergence</span></span><span class="year">2025</span></a>
+        <p class="note">Nobody officially knows who is in this band. They wear masks, they do not give interviews, and they have somehow become one of the biggest bands in the world anyway.</p>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=-UUSUrr6zyo"><span class="line"><span class="artist">Sleep Token</span><span class="title">Chokehold</span></span><span class="year">2023</span></a>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=racmy7Y9P4M"><span class="line"><span class="artist">Bring Me the Horizon</span><span class="title">Parasite Eve</span></span><span class="year">2020</span></a>
+        <p class="note">From Sheffield, in England. They started out unlistenably heavy and have been getting more melodic with every album since, which is the opposite of what bands normally do. These three run backwards through that change.</p>
+        <p class="note">This one was written during the pandemic, and it sounds exactly like that felt.</p>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=l2yzI5OQkOs"><span class="line"><span class="artist">Bring Me the Horizon</span><span class="title">Doomed</span></span><span class="year">2015</span></a>
         <p class="aside"><a href="https://www.youtube.com/watch?v=r6L-GUOAhGo">There is a very good cover of this by MAPHRA</a></p>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=racmy7Y9P4M"><span class="line"><span class="artist">Bring Me the Horizon</span><span class="title">Parasite Eve</span></span><span class="year">2020</span></a>
-        <p class="note">Written during the pandemic, and it sounds exactly like that felt.</p>
+        <a href="https://www.youtube.com/watch?v=QJJYpsA5tv8"><span class="line"><span class="artist">Bring Me the Horizon</span><span class="title">Can You Feel My Heart</span></span><span class="year">2013</span></a>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=o_l4Ab5FRwM"><span class="line"><span class="artist">Five Finger Death Punch</span><span class="title">Wrong Side of Heaven</span></span><span class="year">2013</span></a>
         <p class="note">Ex-military, and they write about veterans and mental health properly rather than as decoration. The video is the point of this one.</p>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=-UUSUrr6zyo"><span class="line"><span class="artist">Sleep Token</span><span class="title">Chokehold</span></span><span class="year">2023</span></a>
-        <p class="note">Nobody officially knows who is in this band. They wear masks, they do not give interviews, and they have somehow become one of the biggest bands in the world anyway.</p>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=JJpFTUP6fIo"><span class="line"><span class="artist">Sleep Token</span><span class="title">Emergence</span></span><span class="year">2025</span></a>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=Qzw6A2WC5Qo"><span class="line"><span class="artist">Skillet</span><span class="title">Invincible</span></span><span class="year">&mdash;</span></a>
@@ -249,7 +226,6 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 2 -->
 <section class="era" id="deep">
-  <p class="era-years">2008 onwards</p>
   <div class="era-body">
     <h2>The deep end</h2>
     <p class="era-note">Good luck hearing the lyrics. These are the heaviest things on the page and they are not for having on in the background while you do your homework.</p>
@@ -272,15 +248,17 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 3 -->
 <section class="era" id="prog">
-  <p class="era-years">2001&ndash;2021</p>
   <div class="era-body">
     <h2>Pieces of music, not songs</h2>
     <p class="era-note">Progressive and technical metal. These bands write in odd time signatures and build things slowly over eight or nine minutes. Not background music: they want your whole attention and they are worth it.</p>
-    <p class="preamble"><em>On the first three:</em> if you remember the album with the binocular case, where you could look through it and see the artwork in 3D, that band is Tool. They have a great many good songs. These are my favourites.</p>
+    <p class="preamble"><em>On the last three:</em> if you remember the album with the binocular case, where you could look through it and see the artwork in 3D, that band is Tool. They have a great many good songs. These are my favourites.</p>
     <ol class="tracks">
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=kLHGIv46a8Q"><span class="line"><span class="artist">Tool</span><span class="title">Schism</span></span><span class="year">2001</span></a>
-        <p class="note">The sound at the very start is a slow-motion recording of the singer's cat being briefly squeezed. The cat was fine.</p>
+        <a href="https://www.youtube.com/watch?v=iJqVjglvnoc"><span class="line"><span class="artist">Gojira</span><span class="title">The Art of Dying</span></span><span class="year">2021</span></a>
+        <p class="note">French, despite the name: Gojira is the original Japanese name for Godzilla. You may remember this one from the car.</p>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=iqrMFNMgVS0"><span class="line"><span class="artist">Gojira</span><span class="title">Another World</span></span><span class="year">2021</span></a>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=bndL7wwAj0U"><span class="line"><span class="artist">Tool</span><span class="title">Right in Two</span></span><span class="year">2006</span></a>
@@ -291,11 +269,8 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
         <p class="note">And this one. It is about why people cannot look away from bad news, and it was written before anybody had a phone in their pocket.</p>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=iJqVjglvnoc"><span class="line"><span class="artist">Gojira</span><span class="title">The Art of Dying</span></span><span class="year">2021</span></a>
-        <p class="note">French, despite the name: Gojira is the original Japanese name for Godzilla. You may remember this one from the car.</p>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=iqrMFNMgVS0"><span class="line"><span class="artist">Gojira</span><span class="title">Another World</span></span><span class="year">2021</span></a>
+        <a href="https://www.youtube.com/watch?v=kLHGIv46a8Q"><span class="line"><span class="artist">Tool</span><span class="title">Schism</span></span><span class="year">2001</span></a>
+        <p class="note">The sound at the very start is a slow-motion recording of the singer's cat being briefly squeezed. The cat was fine.</p>
       </li>
     </ol>
   </div>
@@ -303,13 +278,13 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 4 -->
 <section class="era" id="altrock">
-  <p class="era-years">2003&ndash;2009</p>
   <div class="era-body">
     <h2>The radio years</h2>
     <p class="era-note">Softer edges, bigger choruses, written to be sung by a stadium. No apologies for any of these.</p>
     <ol class="tracks">
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=O2IuJPh6h_A"><span class="line"><span class="artist">Muse</span><span class="title">Time Is Running Out</span></span><span class="year">2003</span></a>
+        <a href="https://www.youtube.com/watch?v=vnIJd9_Io7A"><span class="line"><span class="artist">Fightstar</span><span class="title">Death Car</span></span><span class="year">2009</span></a>
+        <p class="note">This one got me through a bad stretch after my flat was broken into. Some music is for enjoying and some is for using, and this was the second kind.</p>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=2SpzrzIEqzE"><span class="line"><span class="artist">Thirty Seconds to Mars</span><span class="title">The Kill</span></span><span class="year">2005</span></a>
@@ -319,12 +294,11 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
         <a href="https://www.youtube.com/watch?v=vv8FPpIYGcY"><span class="line"><span class="artist">Nickelback</span><span class="title">Saving Me</span></span><span class="year">2005</span></a>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=B5lzYG83yVQ"><span class="line"><span class="artist">Seether</span><span class="title">Careless Whisper</span></span><span class="year">&mdash;</span></a>
-        <p class="note">A cover of the George Michael song, played completely straight and very heavy, which turns out to be exactly what it needed.</p>
+        <a href="https://www.youtube.com/watch?v=O2IuJPh6h_A"><span class="line"><span class="artist">Muse</span><span class="title">Time Is Running Out</span></span><span class="year">2003</span></a>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=vnIJd9_Io7A"><span class="line"><span class="artist">Fightstar</span><span class="title">Death Car</span></span><span class="year">2009</span></a>
-        <p class="note">This one got me through a bad stretch after my flat was broken into. Some music is for enjoying and some is for using, and this was the second kind.</p>
+        <a href="https://www.youtube.com/watch?v=B5lzYG83yVQ"><span class="line"><span class="artist">Seether</span><span class="title">Careless Whisper</span></span><span class="year">&mdash;</span></a>
+        <p class="note">A cover of the George Michael song, played completely straight and very heavy, which turns out to be exactly what it needed.</p>
       </li>
     </ol>
   </div>
@@ -332,16 +306,12 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 5 -->
 <section class="era" id="symphonic">
-  <p class="era-years">2002&ndash;2005</p>
   <div class="era-body">
     <h2>Big voices</h2>
     <p class="era-note">Symphonic and gothic metal: proper singing on top of the heaviness, often by someone with classical training and an orchestra behind them.</p>
     <ol class="tracks">
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=ltoaQo2ynSo"><span class="line"><span class="artist">Evanescence</span><span class="title">Bring Me to Life</span></span><span class="year">2003</span></a>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=CdhqVtpR2ts"><span class="line"><span class="artist">Evanescence</span><span class="title">Going Under</span></span><span class="year">2003</span></a>
+        <a href="https://www.youtube.com/watch?v=iWIADZKU9dw"><span class="line"><span class="artist">Flyleaf</span><span class="title">I'm So Sick</span></span><span class="year">2005</span></a>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=47e_961OQWE"><span class="line"><span class="artist">Nightwish</span><span class="title">Ghost Love Score</span></span><span class="year">2004</span></a>
@@ -356,7 +326,10 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
         <p class="note">The woman singing is a guest. The band's actual singer is the one doing the other thing.</p>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=iWIADZKU9dw"><span class="line"><span class="artist">Flyleaf</span><span class="title">I'm So Sick</span></span><span class="year">2005</span></a>
+        <a href="https://www.youtube.com/watch?v=ltoaQo2ynSo"><span class="line"><span class="artist">Evanescence</span><span class="title">Bring Me to Life</span></span><span class="year">2003</span></a>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=CdhqVtpR2ts"><span class="line"><span class="artist">Evanescence</span><span class="title">Going Under</span></span><span class="year">2003</span></a>
       </li>
     </ol>
   </div>
@@ -364,27 +337,23 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 6 -->
 <section class="era" id="numetal">
-  <p class="era-years">1997&ndash;2004</p>
   <div class="era-body">
     <h2>The period when weirder was better</h2>
     <p class="era-note">Nu-metal. Detuned guitars, hip-hop rhythms, and a race between about forty bands to be the strangest one in the room. This was my late teens and twenties, and it has not aged evenly.</p>
     <ol class="tracks">
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=XOzs1FehYOA"><span class="line"><span class="artist">Deftones</span><span class="title">My Own Summer (Shove It)</span></span><span class="year">1997</span></a>
+        <a href="https://www.youtube.com/watch?v=VenNcnqeAgQ"><span class="line"><span class="artist">Korn &amp; Skrillex</span><span class="title">Get Up!</span></span><span class="year">2011</span></a>
+        <p class="note">Korn thirteen years on, having decided that what metal needed was dubstep. The song underneath this one is where they started, and the gap between the two is the whole story.</p>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=jRGrNDV2mKc"><span class="line"><span class="artist">Korn</span><span class="title">Freak on a Leash</span></span><span class="year">1998</span></a>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=VenNcnqeAgQ"><span class="line"><span class="artist">Korn &amp; Skrillex</span><span class="title">Get Up!</span></span><span class="year">2011</span></a>
-        <p class="note">Same band, thirteen years later, deciding that what metal needed was dubstep. Out of order on this page on purpose, so you can hear what happened to them.</p>
+        <a href="https://www.youtube.com/watch?v=6fVE8kSM43I"><span class="line"><span class="artist">Slipknot</span><span class="title">Duality</span></span><span class="year">2004</span></a>
+        <p class="note">Nine people, all in masks, all with a number instead of a name. It should be ridiculous and somehow it is not.</p>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=YIqbdnaPcT8"><span class="line"><span class="artist">Mudvayne</span><span class="title">Dig</span></span><span class="year">2000</span></a>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=09LTT0xwdfw"><span class="line"><span class="artist">Disturbed</span><span class="title">Down with the Sickness</span></span><span class="year">2000</span></a>
-        <p class="note">The same band who later did the very serious cover of The Sound of Silence, which is a genuinely difficult fact to hold in your head while this one is playing.</p>
+        <a href="https://www.youtube.com/watch?v=OYjZK_6i37M"><span class="line"><span class="artist">Godsmack</span><span class="title">I Stand Alone</span></span><span class="year">2002</span></a>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=CSvFpBOe8eY"><span class="line"><span class="artist">System of a Down</span><span class="title">Chop Suey!</span></span><span class="year">2001</span></a>
@@ -398,11 +367,14 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
         <p class="aside"><a href="https://www.youtube.com/watch?v=Uk18bFIgOS4">The children's version</a></p>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=OYjZK_6i37M"><span class="line"><span class="artist">Godsmack</span><span class="title">I Stand Alone</span></span><span class="year">2002</span></a>
+        <a href="https://www.youtube.com/watch?v=YIqbdnaPcT8"><span class="line"><span class="artist">Mudvayne</span><span class="title">Dig</span></span><span class="year">2000</span></a>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=6fVE8kSM43I"><span class="line"><span class="artist">Slipknot</span><span class="title">Duality</span></span><span class="year">2004</span></a>
-        <p class="note">Nine people, all in masks, all with a number instead of a name. It should be ridiculous and somehow it is not.</p>
+        <a href="https://www.youtube.com/watch?v=09LTT0xwdfw"><span class="line"><span class="artist">Disturbed</span><span class="title">Down with the Sickness</span></span><span class="year">2000</span></a>
+        <p class="note">The same band who later did the very serious cover of The Sound of Silence, which is a genuinely difficult fact to hold in your head while this one is playing.</p>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=XOzs1FehYOA"><span class="line"><span class="artist">Deftones</span><span class="title">My Own Summer (Shove It)</span></span><span class="year">1997</span></a>
       </li>
     </ol>
   </div>
@@ -410,23 +382,23 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 7 -->
 <section class="era" id="industrial">
-  <p class="era-years">1996&ndash;2004</p>
   <div class="era-body">
     <h2>Industrial and shock rock</h2>
     <p class="era-note">Machinery noises, theatre, and bands who worked out that being frightening on television was a career. Half of this was designed to upset people's parents, which by now includes me.</p>
     <ol class="tracks">
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=Ypkv0HeUvTc"><span class="line"><span class="artist">Marilyn Manson</span><span class="title">The Beautiful People</span></span><span class="year">1996</span></a>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=fwgNscjpHn4"><span class="line"><span class="artist">Rob Zombie</span><span class="title">From the Matrix soundtrack</span></span><span class="year">1999</span></a>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=W3q8Od5qJio"><span class="line"><span class="artist">Rammstein</span><span class="title">Du Hast</span></span><span class="year">1997</span></a>
+        <a href="https://www.youtube.com/watch?v=Rr8ljRgcJNM"><span class="line"><span class="artist">Rammstein</span><span class="title">Amerika</span></span><span class="year">2004</span></a>
         <p class="note">German, and they have never once considered singing in English to make it easier for anybody. Famous for setting large parts of the stage on fire, including occasionally the singer.</p>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=Rr8ljRgcJNM"><span class="line"><span class="artist">Rammstein</span><span class="title">Amerika</span></span><span class="year">2004</span></a>
+        <a href="https://www.youtube.com/watch?v=W3q8Od5qJio"><span class="line"><span class="artist">Rammstein</span><span class="title">Du Hast</span></span><span class="year">1997</span></a>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=fwgNscjpHn4"><span class="line"><span class="artist">Rob Zombie</span><span class="title">Dragula</span></span><span class="year">1998</span></a>
+        <p class="note">From The Matrix soundtrack.</p>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=Ypkv0HeUvTc"><span class="line"><span class="artist">Marilyn Manson</span><span class="title">The Beautiful People</span></span><span class="year">1996</span></a>
       </li>
     </ol>
   </div>
@@ -434,27 +406,26 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 8 -->
 <section class="era" id="grunge">
-  <p class="era-years">1994&ndash;1997</p>
   <div class="era-body">
     <h2>Grunge and alternative</h2>
     <p class="era-note">What was on the radio when I was at school. Quiet verse, enormous chorus, and a singer who sounds like they mean it.</p>
     <ol class="tracks">
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=xsJ4O-nSveg"><span class="line"><span class="artist">Live</span><span class="title">Lightning Crashes</span></span><span class="year">1994</span></a>
-      </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=hOllF3TgAsM"><span class="line"><span class="artist">Bush</span><span class="title">Glycerine</span></span><span class="year">1994</span></a>
+        <a href="https://www.youtube.com/watch?v=8KHwuOtcALQ"><span class="line"><span class="artist">Silverchair</span><span class="title">Freak</span></span><span class="year">1997</span></a>
+        <p class="note">Australian, from Newcastle in New South Wales. They were fifteen when they recorded their first album, which was extremely annoying for everyone else who was fifteen at the time.</p>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=8FIBPKRV3kk"><span class="line"><span class="artist">Bush</span><span class="title">Swallowed</span></span><span class="year">1996</span></a>
+      </li>
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=hOllF3TgAsM"><span class="line"><span class="artist">Bush</span><span class="title">Glycerine</span></span><span class="year">1994</span></a>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=8-r-V0uK4u0"><span class="line"><span class="artist">Smashing Pumpkins</span><span class="title">Bullet with Butterfly Wings</span></span><span class="year">1995</span></a>
         <p class="note">I played drums for this song at a high-school talent night in my last year. It is harder than it sounds.</p>
       </li>
       <li class="track">
-        <a href="https://www.youtube.com/watch?v=8KHwuOtcALQ"><span class="line"><span class="artist">Silverchair</span><span class="title">Freak</span></span><span class="year">1997</span></a>
-        <p class="note">Australian, from Newcastle in New South Wales. They were fifteen when they recorded their first album, which was extremely annoying for everyone else who was fifteen at the time.</p>
+        <a href="https://www.youtube.com/watch?v=xsJ4O-nSveg"><span class="line"><span class="artist">Live</span><span class="title">Lightning Crashes</span></span><span class="year">1994</span></a>
       </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><span class="line"><span class="artist">Richarda</span><span class="title">Keep You Always</span></span><span class="year">&mdash;</span></a>
@@ -465,11 +436,14 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
 
 <!-- 9 -->
 <section class="era" id="thrash">
-  <p class="era-years">1984&ndash;1996</p>
   <div class="era-body">
     <h2>Where it starts</h2>
     <p class="era-note">The heavy end of the 1980s and early 90s, and the bottom of the page because it is the bottom of everything. All of it above grew out of these four songs, whether the bands admit it or not.</p>
     <ol class="tracks">
+      <li class="track">
+        <a href="https://www.youtube.com/watch?v=F_6IjeprfEs"><span class="line"><span class="artist">Sepultura</span><span class="title">Roots Bloody Roots</span></span><span class="year">1996</span></a>
+        <p class="note">Brazilian. They started putting Amazonian percussion into metal years before anyone else thought it was a good idea.</p>
+      </li>
       <li class="track">
         <a href="https://www.youtube.com/watch?v=tAGnKpE4NCI"><span class="line"><span class="artist">Metallica</span><span class="title">Nothing Else Matters</span></span><span class="year">1991</span></a>
       </li>
@@ -480,17 +454,12 @@ footer .stamp{font-family:var(--mono);font-size:.66rem;color:var(--ink-faint);ma
       <li class="track">
         <a href="https://www.youtube.com/watch?v=i97OkCXwotE"><span class="line"><span class="artist">Pantera</span><span class="title">Cowboys from Hell</span></span><span class="year">1990</span></a>
       </li>
-      <li class="track">
-        <a href="https://www.youtube.com/watch?v=F_6IjeprfEs"><span class="line"><span class="artist">Sepultura</span><span class="title">Roots Bloody Roots</span></span><span class="year">1996</span></a>
-        <p class="note">Brazilian. They started putting Amazonian percussion into metal years before anyone else thought it was a good idea.</p>
-      </li>
     </ol>
   </div>
 </section>
 
 <!-- 10 -->
 <section class="era" id="score">
-  <p class="era-years">&mdash;</p>
   <div class="era-body">
     <h2>Not a band</h2>
     <p class="era-note">Written for a video game rather than a record, which turns out not to matter at all.</p>
